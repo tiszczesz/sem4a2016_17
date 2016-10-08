@@ -1,0 +1,17 @@
+h1{
+	border-bottom: solid 2px grey;
+	width: 500px;
+	margin: 15px;
+}
+div#menu ul{
+	list-style-type: none;
+}
+div#menu ul li a{
+	display: inline-block;
+	width: 300px;
+	border: solid thin green;
+	background-color: lightgreen;
+	padding: 10px;
+	text-decoration: none;
+	color: green;
+}
