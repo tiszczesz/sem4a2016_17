@@ -7,13 +7,12 @@
     <body>
         <pre>
             <?php
-            $a = [2, 4, 5, 6];
+            $a = [2, 4, 5, 6,"ererere",[3,3,6,6]]; 
             var_dump($a);
 
             class User {
                 
             }
-
             $user = new User();
             var_dump($user);
             ?>

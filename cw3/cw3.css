@@ -1,0 +1,23 @@
+div.wiz{
+    border: solid 2px #330066;
+    padding: 10px;
+    color: #330066;
+    background-color: #cc99ff;
+    margin: 10px;
+    width: 300px;
+}
+table{
+    border-collapse: collapse;
+    
+}
+td{
+    padding: 4px;
+    text-align: right;
+    border: solid thin grey;
+}
+td.header{
+    background-color: #cc99ff;
+}
+tr.bold1 {
+    font-weight: bold;
+}
