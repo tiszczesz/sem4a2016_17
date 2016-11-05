@@ -18,7 +18,7 @@ function GetWorkers() {
         3 => ["Monika", "Głowacka", 2500],
         4 => ["Piotr", "Gryk", 7800],
         5 => ["Anna", "Kowalska", 3100],
-        6 => ["Nowy", "Nowszy", 5500]
+        6 => ["Nowy", "Nowszy-Najnowszy", 5500]
     ];
 }
 
@@ -41,37 +41,61 @@ function GetMax($dane) {
     }
     return $dane[$kmax];
 }
-    function GetAVG(array $dane) {
-        return GetSum($dane) / count($dane);
-    }
-    function GetStatFromWorkers(array $dane) {
-        return [
-            'suma' => GetSum($dane),
-            'Srednia' => GetAVG($dane),
-            'maksymalna' => GetMax($dane),
-            'minimalna' => 0
-        ];
-    }
-
-    function ArrayToSelect(array $dane) {
-        $html = '<select>';
-        foreach ($dane as $k => $row) {
-            $html .= "<option value='{$k}'>{$row[0]} {$row[1]} {$row[2]}PLN</option>\n";
+function GetMaxLength($dane) {
+    $max = -PHP_INT_MAX;
+    $kmax = -1;
+    foreach ($dane as $k => $row) {
+        if ($max < strlen($row[1])) {
+            $max = strlen($row[1]);
+            $kmax = $k;
         }
-
-        return $html . '</select>';
     }
-
-    function ArrayToHtml(array $dane) {
-        $html = '<table>';
-        $html .= '<tr><th>Lp</th><th>Imię</th><th>Nazwisko</th>'
-                . '<th>Wiek</th></tr>' . "\n";
-        $i = 0;
-        foreach ($dane as $row) {
-            $i++;
-            $html .= "<tr><td>{$i}</td><td>{$row[0]}</td>"
-                    . "<td>{$row[1]}</td><td>{$row[2]}</td></tr>\n";
+    return $dane[$kmax];
+}
+function GetMin($dane) {
+    $min = PHP_INT_MAX;
+    $kmin = -1;
+    foreach ($dane as $k => $row) {
+        if ($min > $row[2]) {
+            $min = $row[2];
+            $kmin = $k;
         }
-        return $html . '</table>';
     }
-    
+    return $dane[$kmin];
+}
+
+function GetAVG(array $dane) {
+    return GetSum($dane) / count($dane);
+}
+
+function GetStatFromWorkers(array $dane) {
+    return [
+        'suma' => GetSum($dane),
+        'Srednia' => GetAVG($dane),
+        'maksymalna' => GetMax($dane),
+        'minimalna' => GetMin($dane),
+        'maxlength' => GetMaxLength($dane)
+    ];
+}
+
+function ArrayToSelect(array $dane) {
+    $html = '<select>';
+    foreach ($dane as $k => $row) {
+        $html .= "<option value='{$k}'>{$row[0]} {$row[1]} {$row[2]}PLN</option>\n";
+    }
+
+    return $html . '</select>';
+}
+
+function ArrayToHtml(array $dane) {
+    $html = '<table>';
+    $html .= '<tr><th>Lp</th><th>Imię</th><th>Nazwisko</th>'
+            . '<th>Wiek</th></tr>' . "\n";
+    $i = 0;
+    foreach ($dane as $row) {
+        $i++;
+        $html .= "<tr><td>{$i}</td><td>{$row[0]}</td>"
+                . "<td>{$row[1]}</td><td>{$row[2]}</td></tr>\n";
+    }
+    return $html . '</table>';
+}
