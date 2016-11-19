@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    color: brown;
+    
+}
+div.line{
+    margin: 8px;
+    
+}
+label{
+    margin-right: 6px;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}

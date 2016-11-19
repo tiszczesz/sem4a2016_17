@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularz zgłoszeniowy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cw9.css"/>
+    </head>
+    <body>
+        <h1>Formularz zgłoszeniowy</h1>
+        <form action="wynik.php" method="post">
+            <fieldset>
+                <legend>Dane osobowe</legend>
+                <div class="line"><label>Imię:</label>
+                    <input type="text" id="imie" name="imie"> 
+                    <span class="error" id="errorimie"></span>
+                </div>
+                <div class="line"><label>Nazwisko:</label>
+                    <input type="text" id="nazwisko" name="nazwisko"> 
+                    <span class="error" id="errornazwisko"></span>
+                </div>
+                 <div class="line"><label>Płeć:</label>
+                     <input type="radio"  name="plec" value="k" checked="">Kobieta 
+                    <input type="radio"  name="plec" value="m">Mężczyzna 
+                </div>
+                <div class="line"><label>Semestr:</label>
+                    <select name="semestr">
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                        <option value="1D">1D</option>
+                    </select>
+                </div>
+                <div class="line"><label>Zainteresowania:</label>
+                    <input type="checkbox" name="zaint[]" value="muzyka"/>muzyka
+                    <input type="checkbox" name="zaint[]" value="film"/>film
+                    <input type="checkbox" name="zaint[]" value="książka"/>książka
+                    <input type="checkbox" name="zaint[]" value="taniec"/>taniec
+                    <input type="checkbox" name="zaint[]" value="sport"/>sport
+                </div>
+                <div class="line">
+                    <label></label>
+                    <input type="submit" value="Wyślij"/>
+                </div>
+            </fieldset>
+        </form>
+        
+    </body>
+</html>
