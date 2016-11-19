@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Zamówienie pizzy</h1>
+        
+        <form action="wynik.php" method="post">
+            <fieldset>
+                <legend>Wybór pizzy</legend>
+                <div class="line"><label>Imię:</label>
+                    <input type="text" id="imie" name="imie"> 
+                    <span class="error" id="errorimie"></span>
+                </div>
+                
+                
+                <div class="line"><label>Rodzaj pizzy:</label>
+                    <select name="pizza">
+                        <option value="5.99">czysta 5.99zł</option>
+                        <option value="6.99">z boczkiem 6.99zł</option>
+                        <option value="9.99">full 9.99zł</option>
+                        <option value="4.99">mała 4.99zł</option>
+                    </select>
+                </div>
+                <div class="line"><label>dodatki:</label>
+                    <input type="checkbox" name="dod[]" value="2.99"/>ketchup 2.99zł
+                    <input type="checkbox" name="dod[]" value="4.99"/>Cola 4.99zł
+                    <input type="checkbox" name="dod[]" value="5.99"/>kawa 5.99zł
+                    <input type="checkbox" name="dod[]" value="4.99"/>zupa 4.99zł
+                   
+                </div>
+                <div class="line">
+                    <label></label>
+                    <input type="submit" value="zamów"/>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
