@@ -59,3 +59,6 @@ label{
     display: inline-block;
     width: 100px;
 }
+.error{
+    color: red;
+}
