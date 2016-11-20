@@ -1,0 +1,4 @@
+Jan|Nowak|3600
+Adam|Malinowski|2700
+Anna|Małecka|3500
+Danuta|Gruszka|4400

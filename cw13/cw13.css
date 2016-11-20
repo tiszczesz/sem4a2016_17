@@ -1,0 +1,61 @@
+div#wrapper{
+    width: 900px;
+}
+div#banner{
+    padding: 10px;
+    font-size: 3em;
+    text-align: center;
+    background-color: brown;
+    color: #ffff66;
+}
+div#menu{
+    float: left;
+    width: 200px;
+}
+div#menu ul{
+    list-style: none;
+    text-align: right;
+}
+div#menu ul li a{
+    margin: auto;
+    display: inline-block;
+    color: brown;
+    text-decoration: none;    
+    padding: 5px;
+}
+div#content{
+    padding: 10px;
+    float: left;
+    width: 650px;
+}
+div#footer{
+    clear: both;
+    text-align: center;
+    font-size: 0.8em;
+}
+table{
+    border-collapse: collapse;
+    
+}
+th{
+    color: brown;
+    background-color: #ffcc66;
+}
+td{
+    
+}
+td,th{
+    padding: 5px;
+    border: solid thin brown;
+}
+div.line{
+    margin-bottom: 10px;
+}
+fieldset{
+    border: solid thin brown;
+}
+label{
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+}
