@@ -2,3 +2,6 @@ Jan|Nowak|3600
 Adam|Malinowski|2700
 Anna|Małecka|3500
 Danuta|Gruszka|4400
+Jarosław|Śmietana|2200
+Grażyna|Jurek|5900
+Mariusz|Szczygieł|2100

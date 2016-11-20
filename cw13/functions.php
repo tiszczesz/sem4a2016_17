@@ -19,3 +19,9 @@ function PracToHtmlTab(array $dane){
     $html .= "</table>\n";
     return $html;
 }
+function AddNewWorker($filename,$imie,$nazwisko,$pensja){
+    $p = fopen($filename, 'a');
+    $row = $imie.'|'.$nazwisko.'|'.$pensja.PHP_EOL;
+    fwrite($p, $row);
+    fclose($p);
+}
