@@ -8,3 +8,4 @@ Mariusz|Szczygieł|2100
 sadada|adada|23333
 ssdsdsd|dfdfdf|
 ssdsdsd|Ssdsdsds|23444
+Adam|Wszołek|4500
