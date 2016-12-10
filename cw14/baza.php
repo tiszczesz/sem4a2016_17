@@ -38,4 +38,12 @@ function workersToHtmlTab(array $dane){
     $html .="</table>\n";
     return $html;
 }
-
+function getSum($conn){
+    if($conn){
+       $sql = "SELECT SUM(pensja) FROM pracownicy";
+       $result = $conn->query($sql);
+       return $result->fetch_row()[0];
+    }else{
+        return 0;
+    }
+}
