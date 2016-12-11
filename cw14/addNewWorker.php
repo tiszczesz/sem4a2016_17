@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" href="cw14.css"/>
+        <script type="text/javascript" src="cw14.js"></script>
     </head>
     <body>
         <h1>Dodawanie pracownika</h1>
