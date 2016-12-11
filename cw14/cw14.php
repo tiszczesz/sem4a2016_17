@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link href="cw14.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
        
@@ -14,9 +15,9 @@
         $workers = getAllWorkers($conn);
         echo workersToHtmlTab($workers);
         $sum = getSum($conn);
-        $avg = getAvg($conn);
+        $avg = round(getAvg($conn),2);
         echo "<p>Całkowita pensja pracownków wynosi: {$sum} PLN</p>\n";
-        echo "<p>Średnia pensja pracownków wynosi: {$avg}</p>\n";
+        echo "<p>Średnia pensja pracownków wynosi: {$avg} PLN</p>\n";
         $conn->close();
         ?>
         

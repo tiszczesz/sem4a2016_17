@@ -1,0 +1,15 @@
+
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: solid thin blueviolet;
+    padding: 5px;
+}
+th{
+    background-color: #cc99ff;
+    color: blueviolet;
+}
+td{
+    color: #330066;
+}

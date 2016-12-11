@@ -47,3 +47,12 @@ function getSum($conn){
         return 0;
     }
 }
+function getAvg($conn){
+        if($conn){
+       $sql = "SELECT AVG(pensja) FROM pracownicy";
+       $result = $conn->query($sql);
+       return $result->fetch_row()[0];
+    }else{
+        return 0;
+    }
+}

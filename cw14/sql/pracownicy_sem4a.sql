@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `pracownicy_sem4a`
 --
-CREATE DATABASE IF NOT EXISTS `pracownicy_sem4a` DEFAULT CHARACTER SET utf8 COLLATE utf8_polish_ci;
+CREATE DATABASE IF NOT EXISTS `pracownicy_sem4a` 
+ DEFAULT CHARACTER SET utf8 COLLATE utf8_polish_ci;
 USE `pracownicy_sem4a`;
 
 -- --------------------------------------------------------
