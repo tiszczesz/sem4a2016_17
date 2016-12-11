@@ -20,6 +20,8 @@
         echo "<p>Średnia pensja pracownków wynosi: {$avg} PLN</p>\n";
         $conn->close();
         ?>
-        
+        <div>
+            <a href="addNewWorker.php">Dodaj nowego pracownika</a>
+        </div>
     </body>
 </html>

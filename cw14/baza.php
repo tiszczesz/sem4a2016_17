@@ -56,3 +56,17 @@ function getAvg($conn){
         return 0;
     }
 }
+function stanowiskaToHtmlSelect($conn){
+    if($conn){
+        $sql = "SELECT id, nazwa FROM stanowiska ORDER BY nazwa";
+        $result = $conn->query($sql);
+        $html = "<select name='stanowisko'>";
+        while ($row = $result->fetch_assoc()){
+            $html .= "<option value='{$row['id']}'>{$row['nazwa']}</option>\n";
+        }
+        $html .= "</select>\n";
+        return $html;
+    }else{
+        return "";
+    }
+}
