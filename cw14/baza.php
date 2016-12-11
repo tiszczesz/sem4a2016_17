@@ -70,3 +70,37 @@ function stanowiskaToHtmlSelect($conn){
         return "";
     }
 }
+function insertToWorkers($conn,$imie,$nazwisko,$pensja,$stanowiskoid){
+    if($conn){
+        $sql = "INSERT INTO pracownicy(imie,nazwisko,pensja,stanowiskoid)"
+                . " values('{$imie}','{$nazwisko}',{$pensja},{$stanowiskoid})";
+        $result = $conn->query($sql);
+        return $result;
+    }
+    return NULL;
+}
+function workerToSelect($conn){
+    if($conn){
+        $sql =  "SELECT id, imie, nazwisko FROM pracownicy "
+               . "ORDER BY nazwisko";
+        $result = $conn->query($sql);
+        $html = "<form action='delete.php' method='post'>";
+        $html .= "<select name='pracownik'>";
+        while($row = $result->fetch_assoc()){
+            $html .= "<option value='{$row['id']}'>{$row['nazwisko']}"
+                      . " {$row['imie']}</option>\n";
+        }
+        $html .= "</select><input type='submit' value='Usuń'/></form>\n";
+        return $html;
+    }else{
+        return " Błąd  ";
+    }
+}
+
+function deleteWorker($conn,$id){
+    if($conn){
+        $result = $conn->query("DELETE FROM pracownicy where id={$id}");
+        return $result;
+    }
+    return NULL;
+}

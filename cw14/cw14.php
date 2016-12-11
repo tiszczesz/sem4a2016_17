@@ -23,5 +23,8 @@
         <div>
             <a href="addNewWorker.php">Dodaj nowego pracownika</a>
         </div>
+        <div>
+            <a href="deleteWorker.php">Usuń pracownika</a>
+        </div>
     </body>
 </html>
